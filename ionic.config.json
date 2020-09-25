@@ -1,5 +1,7 @@
 {
   "name": "DeliveryAppRestaurantIonic",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
