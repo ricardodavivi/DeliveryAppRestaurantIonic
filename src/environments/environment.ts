@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://10.10.10.7:3000'
+  api: 'http://api-meuapp-com.umbler.net'
 };
 
 /*
