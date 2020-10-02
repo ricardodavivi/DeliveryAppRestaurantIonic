@@ -3,7 +3,7 @@ export interface IResturantModel {
     phone?: string;
     open?: boolean;
     cep?: string;
-    stret?: string;
+    street?: string;
     number?: string;
     complement?: string;
     neighborhood?: string;
