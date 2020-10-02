@@ -4,13 +4,29 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Pedido</ion-title>
-    <ion-title size="small">{{ order.number }}</ion-title>    
+    <ion-title size="small" class="item-number">{{ order.number }}</ion-title>    
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding-horizontal">
 
   <ion-list>
+     <!-- Itens do pedido -->
+     <ion-item-divider color="light">
+      <ion-label>Itens</ion-label>
+    </ion-item-divider>
+    <ion-item lines="full" *ngFor="let item of order.items">
+      <div class="item-container">
+        <div class="item-detail">
+          <div class="item-quantity">{{item?.quantity}}x</div>
+          <div class="item-name ion-padding-horizontal">{{item?.name}}</div>
+          <div class="item-total">{{ item?.total | currency:'BRL' }} </div>
+        </div>
+        <div class="item-detail" *ngIf="item?.notes" >
+          <div>{{ item?.notes }}</div>
+        </div>
+      </div>      
+    </ion-item>
     <ion-item>
       <ion-label><strong>{{ order.statusName }}</strong></ion-label>
     </ion-item>
@@ -64,22 +80,7 @@
       <ion-label>Total: {{ order.total | currency:'BRL' }} </ion-label>
     </ion-item>
 
-    <!-- Itens do pedido -->
-    <ion-item-divider color="light">
-      <ion-label>Itens</ion-label>
-    </ion-item-divider>
-    <ion-item lines="full" *ngFor="let item of order.items">
-      <div class="item-container">
-        <div class="item-detail">
-          <div class="item-quantity">{{item?.quantity}}x</div>
-          <div class="item-name ion-padding-horizontal">{{item?.name}}</div>
-          <div class="item-total">{{ item?.total | currency:'BRL' }} </div>
-        </div>
-        <div class="item-detail" *ngIf="item?.notes" >
-          <div>{{ item?.notes }}</div>
-        </div>
-      </div>      
-    </ion-item>
+   
     
   </ion-list>
 

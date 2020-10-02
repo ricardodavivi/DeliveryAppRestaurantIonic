@@ -37,7 +37,7 @@ export class RestaurantInfoPage implements OnInit {
       if (this.restaurant.cep) {
         const result = await this.viaCepService.getAddressByCep(this.restaurant.cep);
         if (result) {
-          this.restaurant.stret = result.logradouro;
+          this.restaurant.street = result.logradouro;
           this.restaurant.neighborhood = result.bairro;
           this.restaurant.city = result.localidade;
 

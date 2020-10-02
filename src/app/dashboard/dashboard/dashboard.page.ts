@@ -43,6 +43,6 @@ export class DashboardPage {
       if (this.ordersByStatus.amountCreated > 0) {
         this.toast.showWarning('Existem pedidos pendentes aguardando confirmação');
       }
-    }, 60000);
+    }, 50000); 
   }
 }
