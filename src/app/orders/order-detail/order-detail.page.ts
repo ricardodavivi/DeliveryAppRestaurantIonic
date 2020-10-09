@@ -1,3 +1,4 @@
+import { Printer } from '@ionic-native/printer/ngx';
 import { CardType } from './../shared/card-type.enum';
 import { IOrdeDeliveryAddress } from './../shared/iorder-delivery-address';
 import { Component, OnInit } from '@angular/core';
@@ -21,7 +22,9 @@ export class OrderDetailPage implements OnInit {
   constructor(
     private ordersService: OrdersService,
     private activatedRoute: ActivatedRoute,
-    private toast: ToastService
+    private toast: ToastService,
+    private printer: Printer
+    
   ) { }
 
   ngOnInit() {
@@ -57,5 +60,11 @@ export class OrderDetailPage implements OnInit {
     };
 
     return cards[cardType];
+  }
+  printerOrder(order: any) {
+    let print = this.order;
+    window.print()
+    console.log(print);
+        
   }
 }

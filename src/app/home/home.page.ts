@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
       icon: 'information-circle-outline'
     },
     {
-      title: 'Produtos',
+      title: 'Cardápio',
       url: '/cardapio',
       icon: 'fast-food-outline'
     },
