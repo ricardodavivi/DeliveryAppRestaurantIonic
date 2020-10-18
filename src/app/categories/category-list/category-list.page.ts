@@ -17,7 +17,7 @@ export class CategoryListPage {
     private categoryService: CategoryService
   ) { }
 
-  ionViewDidEnter() {
+  ionViewDidEnter() { 
     this.loadCategories();
   }
 

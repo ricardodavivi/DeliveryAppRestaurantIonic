@@ -62,5 +62,5 @@ export class CategoryEditPage implements OnInit {
     } catch (error) {
       this.toast.showError('Erro ao cadastrar a categoria');
     }
-  }
+  } 
 }
